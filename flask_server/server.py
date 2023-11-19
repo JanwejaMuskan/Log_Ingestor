@@ -17,12 +17,12 @@ def create_log_table():
         cur = conn.cursor()
 
         # Check if the 'log' table exists
-        cur.execute("SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = 'log2')")
+        cur.execute("SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = 'log')")
         table_exists = cur.fetchone()[0]
 
         if not table_exists:
             create_table_query = '''
-                CREATE TABLE log2 (
+                CREATE TABLE log (
                     id SERIAL PRIMARY KEY,
                     level VARCHAR(500),
                     message VARCHAR(500),
