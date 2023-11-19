@@ -1,6 +1,9 @@
 # Log_Ingestor
 Dyte SDE-I Hiring Project
 
+## Note
+All the instructions related to the assignment have already been updated in the classroom github repository before 11:59pm
+
 ## Feature Included:
 - The logs could be ingested (in the log ingestor) over HTTP, on port 3000.
 - Offer a user interface (Web UI or CLI) for full-text search across logs.
