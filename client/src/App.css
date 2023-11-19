@@ -1,0 +1,89 @@
+h1 {
+  text-align: center;
+  color: darkblue;
+  font-size: 50px; 
+}
+
+.css-b62m3t-container {
+  position: relative;
+  box-sizing: border-box;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.select-container {
+  margin-top: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+
+input {
+  height: 40px;
+  margin-left: 395px; 
+  width: 690px;
+  margin-top: 10px;
+}
+
+button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  margin-top: 10px; 
+  padding: 5px 10px; 
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 45px;
+  width: 120px;
+}
+
+.startname_style {
+  margin-left: 40px;
+}
+
+.endname_style{
+  margin-left: 10px;
+}
+
+.start-time-input {
+  height: 40px;
+  margin-left: 10px; 
+  width: 450px;
+}
+
+.end-time-input {
+  height: 40px;
+  margin-left: 10px; 
+  width: 450px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.no-logs-message {
+  color: red; 
+  font-size: 30px; 
+  margin-top: 10px; 
+  text-align: center;
+  font-weight: bold;
+}
