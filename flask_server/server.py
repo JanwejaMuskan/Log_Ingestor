@@ -31,7 +31,7 @@ def create_log_table():
                     traceId VARCHAR(500),
                     spanId VARCHAR(500),
                     commit VARCHAR(500),
-                    parentResourceId VARCHAR(500)
+                    parentresourceid VARCHAR(500)
                 );
             '''
             cur.execute(create_table_query)
@@ -94,7 +94,7 @@ def query_logs():
 
         # Extract filters from the request
         filters = request.json
-
+        print("Filters", filters)
         select_query = 'SELECT * FROM log WHERE 1=1'
 
         for key, value in filters.items():
@@ -112,9 +112,11 @@ def query_logs():
                 else:
                     print("Key Timestamp", key)
                     timestamp = datetime.strptime(filters['TimeStamp'], '%Y-%m-%dT%H:%M:%SZ')
-                    filters['TimeStamp'] = timestamp.strftime('%Y-%m-%d %H:%M:%S')
+                    # filters['TimeStamp'] = timestamp.strftime('%Y-%m-%d %H:%M:%S')
             
                     select_query += f' AND {formatted_key} = %({key})s'
+            elif key != 'rangeSearch' and key == 'Metadata.parentResourceId':
+                 select_query += f' AND parentresourceid = %({key})s'
             elif key != 'rangeSearch':
                 select_query += f' AND {formatted_key} = %({key})s'
 
